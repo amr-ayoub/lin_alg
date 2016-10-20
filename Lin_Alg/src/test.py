@@ -6,8 +6,10 @@ Created on Oct 20, 2016
 
 import vector.vect
 
-x = vector.vect.Vector([5.581,-2.136])
-y = vector.vect.Vector([1.996,3.108,-4.554])
+x = vector.vect.Vector([7.35,0.221,5.188])
+y = vector.vect.Vector([2.751,8.259,3.985])
 
-print(x.normalize())
-print(y.normalize())
+
+print(x.angle_deg(y))
+
+#print(y.normalize())

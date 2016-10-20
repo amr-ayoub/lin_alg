@@ -68,6 +68,30 @@ class Vector(object):
         
         return (self.scalar(magnitude))
         
+    def dot_product(self,x):
+        n=len(self.coordinates)
+        res = 0
+        
+        for i in range(n):
+            res = res + (self.coordinates[i] * x.coordinates[i])
+            
+                
+        return res
+        
+        
+    def angle_rad(self,x):
+        res = self.dot_product(x)
+        res = res / (self.magnitude() * x.magnitude())
+        angle = math.acos(res)
+        
+        return angle
+    
+    def angle_deg(self,x):
+        
+        return math.degrees(self.angle_rad(x))
+    
+    
+        
         
     def __str__(self):
         return 'Vector: {}'.format(self.coordinates)
